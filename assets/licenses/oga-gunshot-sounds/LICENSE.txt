@@ -1,0 +1,6 @@
+Gunshot Sounds (cz.wav, mosin.wav, sks.wav, shotty.wav)
+Copyright (c) 2009 Vincent Sevedge
+Audio content is covered under the Creative Commons Attribution 3.0 Unported License
+http://creativecommons.org/licenses/by/3.0/
+Source: https://opengameart.org/node/3611
+Changes: single shots cut, trimmed, faded and normalized; encoded to OGG.
