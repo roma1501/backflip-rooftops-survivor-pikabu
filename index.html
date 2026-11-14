@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
     <title>Выживание на крышах</title>
     <style>
-        @font-face { font-family: 'Rubik'; src: url('assets/fonts/rubik.ttf?v=0.1.5') format('truetype'); font-weight: 300 900; font-display: block; }
+        @font-face { font-family: 'Rubik'; src: url('assets/fonts/rubik.ttf?v=0.1.6') format('truetype'); font-weight: 300 900; font-display: block; }
         :root {
             --line: #0b1018; --panel: #1b2433; --panel2: #243044; --panel3: #2e3c55; --text: #ffffff; --muted: #9fb0c8;
             --yellow: #ffcf2e; --green: #5ccf3a; --blue: #3a9cff; --orange: #ff8a1f; --purple: #9b5cff; --red: #ff4d4d;
@@ -51,34 +51,34 @@
         #ui button { font-family: inherit; }
         .ic { display: inline-block; width: 1.25em; height: 1.25em; flex: none; background: currentColor;
             -webkit-mask: var(--m) center / contain no-repeat; mask: var(--m) center / contain no-repeat; }
-        .ic-pause { --m: url('assets/sprites/ic-pause.png?v=0.1.5'); } .ic-audioon { --m: url('assets/sprites/ic-audioon.png?v=0.1.5'); } .ic-audiooff { --m: url('assets/sprites/ic-audiooff.png?v=0.1.5'); }
-        .ic-home { --m: url('assets/sprites/ic-home.png?v=0.1.5'); } .ic-locked { --m: url('assets/sprites/ic-locked.png?v=0.1.5'); } .ic-star { --m: url('assets/sprites/ic-star.png?v=0.1.5'); }
-        .ic-shoppingcart { --m: url('assets/sprites/ic-shoppingcart.png?v=0.1.5'); } .ic-video { --m: url('assets/sprites/ic-video.png?v=0.1.5'); } .ic-menugrid { --m: url('assets/sprites/ic-menugrid.png?v=0.1.5'); }
-        .ic-arrowup { --m: url('assets/sprites/ic-arrowup.png?v=0.1.5'); } .ic-checkmark { --m: url('assets/sprites/ic-checkmark.png?v=0.1.5'); } .ic-return { --m: url('assets/sprites/ic-return.png?v=0.1.5'); }
-        .ic-trashcan { --m: url('assets/sprites/ic-trashcan.png?v=0.1.5'); } .ic-left { --m: url('assets/sprites/ic-left.png?v=0.1.5'); } .ic-right { --m: url('assets/sprites/ic-right.png?v=0.1.5'); }
-        .ic-fightfist { --m: url('assets/sprites/ic-fightfist.png?v=0.1.5'); } .ic-fastforward { --m: url('assets/sprites/ic-fastforward.png?v=0.1.5'); } .ic-target { --m: url('assets/sprites/ic-target.png?v=0.1.5'); }
-        .coin, .heart { display: inline-block; width: 1.3em; height: 1.3em; flex: none; background: url('assets/ui/coin.png?v=0.1.5') center / contain no-repeat; filter: drop-shadow(0 2px 0 #0006); }
-        .heart { background-image: url('assets/ui/heart.png?v=0.1.5'); }
+        .ic-pause { --m: url('assets/sprites/ic-pause.png?v=0.1.6'); } .ic-audioon { --m: url('assets/sprites/ic-audioon.png?v=0.1.6'); } .ic-audiooff { --m: url('assets/sprites/ic-audiooff.png?v=0.1.6'); }
+        .ic-home { --m: url('assets/sprites/ic-home.png?v=0.1.6'); } .ic-locked { --m: url('assets/sprites/ic-locked.png?v=0.1.6'); } .ic-star { --m: url('assets/sprites/ic-star.png?v=0.1.6'); }
+        .ic-shoppingcart { --m: url('assets/sprites/ic-shoppingcart.png?v=0.1.6'); } .ic-video { --m: url('assets/sprites/ic-video.png?v=0.1.6'); } .ic-menugrid { --m: url('assets/sprites/ic-menugrid.png?v=0.1.6'); }
+        .ic-arrowup { --m: url('assets/sprites/ic-arrowup.png?v=0.1.6'); } .ic-checkmark { --m: url('assets/sprites/ic-checkmark.png?v=0.1.6'); } .ic-return { --m: url('assets/sprites/ic-return.png?v=0.1.6'); }
+        .ic-trashcan { --m: url('assets/sprites/ic-trashcan.png?v=0.1.6'); } .ic-left { --m: url('assets/sprites/ic-left.png?v=0.1.6'); } .ic-right { --m: url('assets/sprites/ic-right.png?v=0.1.6'); }
+        .ic-fightfist { --m: url('assets/sprites/ic-fightfist.png?v=0.1.6'); } .ic-fastforward { --m: url('assets/sprites/ic-fastforward.png?v=0.1.6'); } .ic-target { --m: url('assets/sprites/ic-target.png?v=0.1.6'); }
+        .coin, .heart { display: inline-block; width: 1.3em; height: 1.3em; flex: none; background: url('assets/ui/coin.png?v=0.1.6') center / contain no-repeat; filter: drop-shadow(0 2px 0 #0006); }
+        .heart { background-image: url('assets/ui/heart.png?v=0.1.6'); }
         /* Иконки ImageGen (assets/ui): цветные картинки вместо масок Kenney — те же классы .ic-*. */
         .ic.img { -webkit-mask: none; mask: none; background: var(--i) center / contain no-repeat; }
-        .ic.ic-pause { -webkit-mask: none; mask: none; background: url('assets/ui/pause.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-audioon { -webkit-mask: none; mask: none; background: url('assets/ui/sound-on.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-audiooff { -webkit-mask: none; mask: none; background: url('assets/ui/sound-off.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-home { -webkit-mask: none; mask: none; background: url('assets/ui/home.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-locked { -webkit-mask: none; mask: none; background: url('assets/ui/lock.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-star { -webkit-mask: none; mask: none; background: url('assets/ui/star.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-shoppingcart { -webkit-mask: none; mask: none; background: url('assets/ui/shop.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-video { -webkit-mask: none; mask: none; background: url('assets/ui/reward-video.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-menugrid { -webkit-mask: none; mask: none; background: url('assets/ui/levels.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-arrowup { -webkit-mask: none; mask: none; background: url('assets/ui/upgrade.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-checkmark { -webkit-mask: none; mask: none; background: url('assets/ui/check.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-return { -webkit-mask: none; mask: none; background: url('assets/ui/restart.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-trashcan { -webkit-mask: none; mask: none; background: url('assets/ui/sell.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-left { -webkit-mask: none; mask: none; background: url('assets/ui/back.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-right { -webkit-mask: none; mask: none; background: url('assets/ui/next.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-fightfist { -webkit-mask: none; mask: none; background: url('assets/ui/skull.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-fastforward { -webkit-mask: none; mask: none; background: url('assets/ui/up-firerate.png?v=0.1.5') center / contain no-repeat; }
-        .ic.ic-auto { -webkit-mask: none; mask: none; background: url('assets/ui/auto.png?v=0.1.5') center / contain no-repeat; }
+        .ic.ic-pause { -webkit-mask: none; mask: none; background: url('assets/ui/pause.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-audioon { -webkit-mask: none; mask: none; background: url('assets/ui/sound-on.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-audiooff { -webkit-mask: none; mask: none; background: url('assets/ui/sound-off.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-home { -webkit-mask: none; mask: none; background: url('assets/ui/home.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-locked { -webkit-mask: none; mask: none; background: url('assets/ui/lock.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-star { -webkit-mask: none; mask: none; background: url('assets/ui/star.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-shoppingcart { -webkit-mask: none; mask: none; background: url('assets/ui/shop.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-video { -webkit-mask: none; mask: none; background: url('assets/ui/reward-video.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-menugrid { -webkit-mask: none; mask: none; background: url('assets/ui/levels.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-arrowup { -webkit-mask: none; mask: none; background: url('assets/ui/upgrade.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-checkmark { -webkit-mask: none; mask: none; background: url('assets/ui/check.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-return { -webkit-mask: none; mask: none; background: url('assets/ui/restart.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-trashcan { -webkit-mask: none; mask: none; background: url('assets/ui/sell.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-left { -webkit-mask: none; mask: none; background: url('assets/ui/back.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-right { -webkit-mask: none; mask: none; background: url('assets/ui/next.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-fightfist { -webkit-mask: none; mask: none; background: url('assets/ui/skull.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-fastforward { -webkit-mask: none; mask: none; background: url('assets/ui/up-firerate.png?v=0.1.6') center / contain no-repeat; }
+        .ic.ic-auto { -webkit-mask: none; mask: none; background: url('assets/ui/auto.png?v=0.1.6') center / contain no-repeat; }
 
         .btn {
             --b: var(--green); --bd: #2e8a1b;
@@ -147,10 +147,10 @@
             background: linear-gradient(hsl(calc(200deg + var(--hue)) 35% 28%), hsl(calc(200deg + var(--hue)) 35% 18%)); box-shadow: 0 5px 0 var(--line); }
         .chname { display: flex; align-items: flex-end; gap: 10px; font-weight: 900; font-size: 20px; text-transform: uppercase; letter-spacing: 1px; margin: 0 0 12px; text-shadow: 0 2px 0 #000, 2px 2px 0 #000, -2px 2px 0 #000;
             height: clamp(84px, 16vw, 130px); padding: 10px 12px; border-radius: 14px; border: 3px solid var(--line); box-sizing: border-box; background: #1b2433 center / cover no-repeat; box-shadow: inset 0 -60px 40px -30px #000c; }
-        .ch0 { background-image: url('assets/ui/chapter-0.jpg?v=0.1.5'); } .ch1 { background-image: url('assets/ui/chapter-1.jpg?v=0.1.5'); } .ch2 { background-image: url('assets/ui/chapter-2.jpg?v=0.1.5'); }
-        .ch3 { background-image: url('assets/ui/chapter-3.jpg?v=0.1.5'); } .ch4 { background-image: url('assets/ui/chapter-4.jpg?v=0.1.5'); } .ch5 { background-image: url('assets/ui/chapter-5.jpg?v=0.1.5'); }
-        .ch6 { background-image: url('assets/ui/chapter-6.jpg?v=0.1.5'); } .ch7 { background-image: url('assets/ui/chapter-7.jpg?v=0.1.5'); } .ch8 { background-image: url('assets/ui/chapter-8.jpg?v=0.1.5'); }
-        .ch9 { background-image: url('assets/ui/chapter-9.jpg?v=0.1.5'); }
+        .ch0 { background-image: url('assets/ui/chapter-0.jpg?v=0.1.6'); } .ch1 { background-image: url('assets/ui/chapter-1.jpg?v=0.1.6'); } .ch2 { background-image: url('assets/ui/chapter-2.jpg?v=0.1.6'); }
+        .ch3 { background-image: url('assets/ui/chapter-3.jpg?v=0.1.6'); } .ch4 { background-image: url('assets/ui/chapter-4.jpg?v=0.1.6'); } .ch5 { background-image: url('assets/ui/chapter-5.jpg?v=0.1.6'); }
+        .ch6 { background-image: url('assets/ui/chapter-6.jpg?v=0.1.6'); } .ch7 { background-image: url('assets/ui/chapter-7.jpg?v=0.1.6'); } .ch8 { background-image: url('assets/ui/chapter-8.jpg?v=0.1.6'); }
+        .ch9 { background-image: url('assets/ui/chapter-9.jpg?v=0.1.6'); }
         .chname b { display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; background: #0b1018aa; }
         .lv-grid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 8px; }
         .lv { position: relative; aspect-ratio: 1; border-radius: 14px; border: 3px solid var(--line); cursor: pointer; color: #fff; padding: 0;
@@ -163,8 +163,8 @@
         .lv .num { font-weight: 900; font-size: clamp(15px, 3.4vmin, 24px); text-shadow: 0 2px 0 #000; }
         .lv .num .ic { width: 22px; height: 22px; color: #c9d4e6; }
         .lv .st { display: flex; gap: 1px; }
-        .lv .s { width: 14px; height: 14px; background: url('assets/ui/star-empty.png?v=0.1.5') center / contain no-repeat; opacity: .8; }
-        .lv .s.on { background-image: url('assets/ui/star.png?v=0.1.5'); opacity: 1; }
+        .lv .s { width: 14px; height: 14px; background: url('assets/ui/star-empty.png?v=0.1.6') center / contain no-repeat; opacity: .8; }
+        .lv .s.on { background-image: url('assets/ui/star.png?v=0.1.6'); opacity: 1; }
         .lv .skull img { width: 14px; height: 14px; vertical-align: -3px; margin-right: 2px; }
         .lv .skull { position: absolute; top: -8px; right: -6px; font-size: 9px; font-weight: 900; background: var(--red); border: 2px solid var(--line); border-radius: 8px; padding: 2px 4px; letter-spacing: .5px; }
 
@@ -368,7 +368,7 @@
         .lb-list { width: 100%; display: flex; flex-direction: column; gap: 6px; overflow-y: auto; min-height: 0; flex: 0 1 auto; padding: 2px; box-sizing: border-box; }
         .lbr { display: grid; grid-template-columns: 30px 36px minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 5px 12px; border-radius: 14px; border: 3px solid var(--line); background: linear-gradient(#ffffff12 0 44%, #0000 46%), #2e3c55; flex: none; }
         .lbr .rk { font-weight: 900; font-size: 18px; text-align: center; text-shadow: 0 2px 0 #000; }
-        .lbr .av { display: block; width: 36px; height: 36px; border-radius: 50%; object-fit: cover; background: #0b1018 url('assets/ui/skull.png?v=0.1.5') center / 70% no-repeat; border: 2px solid var(--line); box-sizing: border-box; }
+        .lbr .av { display: block; width: 36px; height: 36px; border-radius: 50%; object-fit: cover; background: #0b1018 url('assets/ui/skull.png?v=0.1.6') center / 70% no-repeat; border: 2px solid var(--line); box-sizing: border-box; }
         .lbr .nm { font-weight: 800; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         .lbr .sc { display: flex; align-items: center; gap: 4px; font-size: 18px; text-shadow: 0 2px 0 #000; } .lbr .sc img { width: 22px; height: 22px; object-fit: contain; }
         .lbr.m1 { background: linear-gradient(#ffffff38 0 44%, #0000 46%), #c99a06; } .lbr.m2 { background: linear-gradient(#ffffff38 0 44%, #0000 46%), #7f8ea5; } .lbr.m3 { background: linear-gradient(#ffffff30 0 44%, #0000 46%), #b0602a; }
@@ -460,9 +460,9 @@
         .rtitle .lose { color: var(--red); text-shadow: 0 5px 0 #8f1d1d, 3px 3px 0 #160404, -3px 3px 0 #160404, 3px -3px 0 #160404, -3px -3px 0 #160404, 0 9px 0 #160404; }
         .rtitle small { display: block; margin-top: 10px; color: var(--muted); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
         .rstars { display: flex; gap: 6px; align-items: flex-end; }
-        .bs { width: 64px; height: 64px; background: url('assets/ui/star-empty.png?v=0.1.5') center / contain no-repeat; }
+        .bs { width: 64px; height: 64px; background: url('assets/ui/star-empty.png?v=0.1.6') center / contain no-repeat; }
         .bs:nth-child(2) { width: 84px; height: 84px; }
-        .bs.on { background-image: url('assets/ui/star.png?v=0.1.5'); animation: starPop .5s var(--d) cubic-bezier(.2,1.8,.4,1) both; }
+        .bs.on { background-image: url('assets/ui/star.png?v=0.1.6'); animation: starPop .5s var(--d) cubic-bezier(.2,1.8,.4,1) both; }
         .rtitle .trophy { display: block; width: 84px; height: 84px; margin: -12px auto 4px; object-fit: contain; animation: starPop .6s cubic-bezier(.2,1.8,.4,1) both, bob 2s 1s ease-in-out infinite; filter: drop-shadow(0 6px 4px #0008); }
         @keyframes starPop { from { transform: scale(0) rotate(-90deg); } }
         .rinfo { width: 100%; display: flex; flex-direction: column; gap: 8px; }
@@ -586,39 +586,41 @@
 
     <!-- Порядок значим: Constants.js первым (остальные читают его глобалы), main.js последним -->
     <script src="https://games.pikabu.ru/sdk/sdk.js"></script>
-<script src="js/Constants.js?v=0.1.5"></script>
-    <script src="libs/simplex-noise.js?v=0.1.5"></script>
-    <script src="libs/babylon.js?v=0.1.5"></script>
-    <script src="js/Maps.js?v=0.1.5"></script>
-    <script src="js/Maps2D.js?v=0.1.5"></script>
-    <script src="js/World2D.js?v=0.1.5"></script>
-    <script src="js/World3D.js?v=0.1.5"></script>
-    <script src="js/Terrain3D.js?v=0.1.5"></script>
-    <script src="js/CameraControl.js?v=0.1.5"></script>
-    <script src="js/Model3D.js?v=0.1.5"></script>
-    <script src="js/ModelFBX.js?v=0.1.5"></script>
-    <script src="js/ModelOBJ.js?v=0.1.5"></script>
-    <script src="js/ModelGLTF.js?v=0.1.5"></script>
-    <script src="js/Location3D.js?v=0.1.5"></script>
-    <script src="js/Pause.js?v=0.1.5"></script>
-    <script src="js/Sound.js?v=0.1.5"></script>
-    <script src="js/Lang.js?v=0.1.5"></script>
-    <script src="js/Platform.js?v=0.1.5"></script>
-    <script src="js/PlatformPikabu.js?v=0.1.5"></script>
-    <script src="js/LoadingScreen.js?v=0.1.5"></script>
-    <script src="js/ParticleFX.js?v=0.1.5"></script>
+<script src="js/Constants.js?v=0.1.6"></script>
+    <script src="libs/simplex-noise.js?v=0.1.6"></script>
+    <script src="libs/babylon.js?v=0.1.6"></script>
+    <script src="js/Maps.js?v=0.1.6"></script>
+    <script src="js/Maps2D.js?v=0.1.6"></script>
+    <script src="js/World2D.js?v=0.1.6"></script>
+    <script src="js/World3D.js?v=0.1.6"></script>
+    <script src="js/Terrain3D.js?v=0.1.6"></script>
+    <script src="js/CameraControl.js?v=0.1.6"></script>
+    <script src="js/Model3D.js?v=0.1.6"></script>
+    <script src="js/ModelFBX.js?v=0.1.6"></script>
+    <script src="js/ModelOBJ.js?v=0.1.6"></script>
+    <script src="js/ModelGLTF.js?v=0.1.6"></script>
+    <script src="js/Location3D.js?v=0.1.6"></script>
+    <script src="js/Pause.js?v=0.1.6"></script>
+    <script src="js/Sound.js?v=0.1.6"></script>
+    <script src="js/Lang.js?v=0.1.6"></script>
+    <script src="js/Platform.js?v=0.1.6"></script>
+    <script src="js/PlatformPikabu.js?v=0.1.6"></script>
+    <script src="js/LoadingScreen.js?v=0.1.6"></script>
+    <script src="js/ParticleFX.js?v=0.1.6"></script>
     <!-- Скрипты игры — здесь, до main.js -->
-    <script src="js/CityData.js?v=0.1.5"></script>
-    <script src="js/GameData.js?v=0.1.5"></script>
-    <script src="js/GameState.js?v=0.1.5"></script>
-    <script src="js/GameArt.js?v=0.1.5"></script>
-    <script src="js/GameCrowd.js?v=0.1.5"></script>
-    <script src="js/GameWorld.js?v=0.1.5"></script>
-    <script src="js/GameMusic.js?v=0.1.5"></script>
-    <script src="js/GameUI.js?v=0.1.5"></script>
-    <script src="js/GameTutorial.js?v=0.1.5"></script>
-    <script src="js/Game.js?v=0.1.5"></script>
-    <script src="js/main.js?v=0.1.5"></script>
+    <script src="js/CityData.js?v=0.1.6"></script>
+    <script src="js/GameData.js?v=0.1.6"></script>
+    <script src="js/GameState.js?v=0.1.6"></script>
+    <script src="js/GameArt.js?v=0.1.6"></script>
+    <script src="js/GameCrowd.js?v=0.1.6"></script>
+    <script src="js/GameWorld.js?v=0.1.6"></script>
+    <script src="js/GameMusic.js?v=0.1.6"></script>
+    <script src="js/GameUI.js?v=0.1.6"></script>
+    <script src="js/GameTutorial.js?v=0.1.6"></script>
+    <script src="js/Game.js?v=0.1.6"></script>
+    <script src="js/PikabuShop.js?v=0.1.6"></script>
+    <script src="js/PikabuPacks.js?v=0.1.6"></script>
+    <script src="js/main.js?v=0.1.6"></script>
     <script>
         // Игровая область: долгий тап и ПКМ не открывают меню браузера, картинки не
         // тянутся, текст не выделяется — кроме настоящих полей ввода.
